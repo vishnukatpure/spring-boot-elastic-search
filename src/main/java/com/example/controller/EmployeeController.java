@@ -41,6 +41,11 @@ public class EmployeeController {
 	public Employee getEmployeeById(@PathVariable("id") Long id) {
 		return employeeEsRepo.searchById(id);
 	}
+	
+	@RequestMapping("/getByName/{name}")
+	public List<Employee> getEmployeeByName(@PathVariable("name") String name) {
+		return employeeEsRepo.searchByName(name);
+	}
 
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public Employee addEmployee(@RequestBody Employee employee) {
