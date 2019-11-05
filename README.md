@@ -2,7 +2,7 @@
 
 # Java
 # Spring-boot ,Spring-Security
-# MySql (for rest authentication & insert data & generate dynamic id)
+# MySql (for rest authentication & insert data to generate id)
 # JPA
 # download elastic search form https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.8.3.zip
 # create index using postman 
