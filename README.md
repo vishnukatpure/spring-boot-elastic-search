@@ -1,11 +1,12 @@
-# [CRUD operation using ElasticSearch] below technologies
-Java
-Spring-boot ,Spring-Security
+# CRUD operation using ElasticSearch below technologies
+Java, 
+Spring-boot ,Spring-Security, 
 MySql (for rest authentication & insert data to generate id)
-JPA
-download elastic search form https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.8.3.zip
+JPA, 
+download elastic search form https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.8.3.zip , 
+upzip & start windows(\elasticsearch-6.8.3\bin\elasticsearch.bat)
 
-# create index using postman 
+# Create index using postman 
 Method:PUT URL: http://localhost:9200/employee-data // {employee-data} is index name 
 
 # use below services for CRUD Operation
@@ -16,10 +17,10 @@ http://localhost:8080/spring-boot-elastic-search/employee/add
 	"firstName": "aaaaaaaa",
 	"email":"sssaa@gmail.com"
 } 
-# 2. update Method:POST 
+# 2. Update Method:POST 
 http://localhost:8080/spring-boot-elastic-search/employee/update/2
 {
-	"lastName": "ooasssssss",
+	"lastName": "ooasssssss", 
 	"firstName": "aaaaaaaa",
 	"email":"sssaa@gmail.com"
 } 
