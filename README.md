@@ -5,9 +5,9 @@ Java,
 Spring-boot ,Spring-Security, 
 MySql (for rest authentication & insert data to generate id),
 JPA
-# Download elastic search form 
+# Download elastic search from 
 https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.8.3.zip , 
-upzip & start ex. for windows(\elasticsearch-6.8.3\bin\elasticsearch.bat)
+upzip & start. example open file in windows(\elasticsearch-6.8.3\bin\elasticsearch.bat)
 
 # Create index using postman OR code will create automatically
 Method:PUT URL: http://localhost:9200/employee-data // {employee-data} is index name 
