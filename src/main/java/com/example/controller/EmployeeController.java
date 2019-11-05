@@ -27,23 +27,38 @@ public class EmployeeController {
 
 	@RequestMapping("/getAll")
 	public List<Employee> getEmployees() {
-		/*List<Employee> employeesList = new ArrayList<Employee>();
+		List<Employee> employeesList;
+		/*employeesList = new ArrayList<Employee>();
 		employeesList.add(new Employee(1, "lokesh", "gupta", "lokesh@gmail.com"));
 		*/
-		List<Employee> employeesList = employeeService.findAll();
+		/*employeesList = employeeService.findAll();*/
+		employeesList = employeeEsRepo.searchAll();
+
 		return employeesList;
 	}
 
 	@RequestMapping("/get/{id}")
 	public Employee getEmployeeById(@PathVariable("id") Long id) {
-		return employeeEsRepo.search(id);
+		return employeeEsRepo.searchById(id);
 	}
 
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public Employee addEmployee(@RequestBody Employee employee) {
 		employee = employeeService.create(employee);
-		employeeEsRepo.insert(employee);
+		employeeEsRepo.insert(employee, employee.getId());
 		return employee;
+	}
+
+	@RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
+	public Employee updateEmployee(@RequestBody Employee employee, @PathVariable("id") Long id) {
+		employeeEsRepo.update(employee, id);
+		return getEmployeeById(id);
+	}
+
+	@RequestMapping(value = "/delete/{id}")
+	public boolean deleteEmployee(@PathVariable("id") Long id) {
+		employeeEsRepo.delete(id);
+		return true;
 	}
 
 }

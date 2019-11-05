@@ -15,7 +15,7 @@ public class Employee {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	private Long id;
 	private String firstName;
 	private String lastName;
 	private String email;
@@ -24,7 +24,7 @@ public class Employee {
 
 	}
 
-	public Employee(Integer id, String firstName, String lastName, String email) {
+	public Employee(Long id, String firstName, String lastName, String email) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -32,11 +32,11 @@ public class Employee {
 		this.email = email;
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
