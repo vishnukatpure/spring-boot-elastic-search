@@ -16,6 +16,7 @@ import org.elasticsearch.action.search.ClearScrollResponse;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.action.update.UpdateRequest;
+import org.elasticsearch.client.Request;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.Response;
 import org.elasticsearch.client.RestHighLevelClient;
@@ -53,7 +54,7 @@ public abstract class GenericEsService<T> {
 	}
 
 	public void createIndexIfNotExist() throws IOException {
-		Response response = restHighLevelClient.getLowLevelClient().performRequest("HEAD", "/" + INDEX);
+		Response response = restHighLevelClient.getLowLevelClient().performRequest(new Request("HEAD", "/" + INDEX));
 		int statusCode = response.getStatusLine().getStatusCode();
 
 		if (statusCode == 404) {

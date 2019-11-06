@@ -2,9 +2,9 @@
 
 # Technologies
 Java, 
-Spring-boot ,Spring-Security, 
+Spring Boot v2.2.0.RELEASE (Micro services) ,Spring-Security, 
 MySql (for rest authentication & insert data to generate id),
-JPA
+JPA, Maven
 # Download elastic search from 
 https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.8.3.zip , 
 upzip & start. example open file in windows(\elasticsearch-6.8.3\bin\elasticsearch.bat)
